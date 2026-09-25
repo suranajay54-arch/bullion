@@ -50,6 +50,9 @@ def run_profile(p, name, ctx_args, js=True):
             sec = page.query_selector('#' + pid)
             check(name, 'static panel ' + pid + ' present with content', sec is not None and len(sec.inner_text()) > 150, pid)
         check(name, 'static notice visible', page.is_visible('#boot-note'))
+        vw = (page.viewport_size or {}).get('width')
+        sw = page.evaluate("document.documentElement.scrollWidth")
+        check(name, 'static page fits the screen width (no sideways scrolling)', vw is None or sw <= vw + 1, 'scrollWidth=%s viewport=%s' % (sw, vw))
         page.screenshot(path=os.path.join(a.out, name + '-02-static-full.png'), full_page=True)
     else:
         ready = page.evaluate("document.documentElement.classList.contains('app-ready')")
@@ -73,6 +76,9 @@ def run_profile(p, name, ctx_args, js=True):
             check(name, 'panel ' + pid + ' shows no null/undefined/NaN text', not junk, junk[:5])
             others = [q for q in PANELS if q != pid and page.is_visible('#' + q)]
             check(name, 'only ' + pid + ' shown', not others, others)
+            vw = (page.viewport_size or {}).get('width')
+            sw = page.evaluate("document.documentElement.scrollWidth")
+            check(name, 'panel ' + pid + ' fits the screen width (no sideways scrolling)', vw is None or sw <= vw + 1, 'scrollWidth=%s viewport=%s' % (sw, vw))
             page.screenshot(path=os.path.join(a.out, '%s-%02d-%s.png' % (name, i + 2, pid)), full_page=(pid in ('parity', 'corridor')))
         page.evaluate("location.hash = '#demo/parity'")
         page.wait_for_timeout(600)
