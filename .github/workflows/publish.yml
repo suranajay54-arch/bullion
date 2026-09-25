@@ -27,12 +27,12 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
           node-version: '22'
       - id: pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
       - name: Build the data snapshot (fetches ECB rates; validates every registry and manual file)
         run: node pipeline/run.js --fetch --fetch-docs --previous "${{ steps.pages.outputs.base_url }}/data/snapshot.json"
       - name: Build the site
@@ -50,7 +50,7 @@ jobs:
           log.checks.forEach(c=>{lines.push('| '+c.level+' | '+c.source+' | '+c.message.replace(/\|/g,'/')+' |'); if(c.level!=='info'){console.log('::warning title='+c.source+'::'+c.message)}});
           fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, lines.join('\n')+'\n');
           "
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: dist
 
@@ -62,4 +62,4 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5

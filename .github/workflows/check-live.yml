@@ -19,12 +19,12 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
       - id: pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
       - name: Install the test browser
         run: |
           pip install playwright
@@ -35,7 +35,7 @@ jobs:
         run: python tests/e2e_check.py --url "${{ steps.pages.outputs.base_url }}/" --out build/e2e-live
       - name: Keep screenshots and the report
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: live-site-check
           path: build/e2e-live
