@@ -1,0 +1,6 @@
+# MCX DAILY CLOSE OR SETTLEMENT PRICES (MANUAL SNAPSHOT)
+# Public display is OFF for this source (see config/sources.json, MCX-SETTLE.publicDisplay).
+# Rows here are validated by the daily job but are NOT published until display rights are confirmed.
+# price is in the contract's native quotation unit (INR per 10 g for GOLD/GOLDM, per 8 g GOLDGUINEA, per 1 g GOLDPETAL, per kg for silver).
+# price_type: CLOSE or SETTLEMENT (write exactly what the MCX file calls it).
+date,product,contract_month,expiry,price,price_type,source_file,entered_by,note

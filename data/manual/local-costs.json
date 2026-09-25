@@ -1,0 +1,9 @@
+{
+  "schema": "ibpci.local-costs/1",
+  "howToUpdate": "Optional. These are YOUR default assumptions shown to every visitor, in rupees per comparison unit (per 10 g for gold, per kg for silver), except financingRatePct (percent per year) and financingDays (days). Leave a value as null if you do not want to publish an assumption: the site then shows landed values before local costs and says so. Visitors can still enter their own numbers in their browser.",
+  "enteredBy": null,
+  "enteredOn": null,
+  "basis": null,
+  "gold":   { "freight": null, "assay": null, "handling": null, "financingRatePct": null, "financingDays": null },
+  "silver": { "freight": null, "assay": null, "handling": null, "financingRatePct": null, "financingDays": null }
+}

@@ -1,0 +1,5 @@
+# COMEX SETTLEMENT PRICES BY CONTRACT MONTH (MANUAL SNAPSHOT)
+# Public display is OFF for this source (CME licence required; see config/sources.json, COMEX-SETTLE).
+# contract: GC or SI followed by the month code and two-digit year, for example GCZ26 (Gold December 2026), SIZ26.
+# price in USD per troy ounce. price_type: SETTLEMENT.
+date,contract,price,price_type,source,entered_by,note

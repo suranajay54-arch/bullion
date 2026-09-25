@@ -1,0 +1,19 @@
+# CUSTOMS EXCHANGE RATES FOR IMPORTS (USD), FROM ICEGATE
+# Where to look (no login, no captcha): https://foservices.icegate.gov.in/#/services/viewExchangeRate
+#   then click "View Exchange Rate Notifications" and "Download PDF" on the newest line.
+#   The PDF header gives the notification number and "w.e.f." date; read the US Dollar row.
+# When: ICEGATE publishes new rates on the 1st and 3rd Thursday of each month, in force from the
+#       next day, so effective_from is the Friday after that Thursday.
+#       ICEGATE sometimes also lists an extra notification the day before a new one that only repeats
+#       the previous rates; it needs no line of its own.
+# How: add ONE new line at the bottom, copying the US Dollar "Rate Import" and "Rate Export" exactly.
+# verification: write OWNER-ENTERED when you copied it from ICEGATE yourself.
+# Lines starting with # are ignored. Keep the header line below unchanged.
+effective_from,currency,import_rate,export_rate,published_on,verification,source_reference,entered_by,entered_on,note
+2026-06-19,USD,95.30,93.60,2026-06-18,VERIFIED,https://foservices.icegate.gov.in/#/services/notifyPublishScreen,site build (read on ICEGATE),2026-09-25,ICEGATE Exchange Rate Notification No. 18/2026 w.e.f. 19-06-2026
+2026-07-03,USD,95.20,93.50,2026-07-02,VERIFIED,https://foservices.icegate.gov.in/#/services/notifyPublishScreen,site build (read on ICEGATE),2026-09-25,ICEGATE Exchange Rate Notification No. 19/2026 w.e.f. 03-07-2026
+2026-07-17,USD,97.20,95.45,2026-07-16,VERIFIED,https://foservices.icegate.gov.in/#/services/notifyPublishScreen,site build (read on ICEGATE),2026-09-25,ICEGATE Exchange Rate Notification No. 22/2026 w.e.f. 17-07-2026 (Nos. 20/2026 and 21/2026 w.e.f. 15 and 16 Jul repeat the 19/2026 rates)
+2026-08-07,USD,96.05,94.30,2026-08-06,VERIFIED,https://foservices.icegate.gov.in/#/services/notifyPublishScreen,site build (read on ICEGATE),2026-09-25,ICEGATE Exchange Rate Notification No. 23/2026 w.e.f. 07-08-2026
+2026-08-21,USD,96.50,94.80,2026-08-20,VERIFIED,https://foservices.icegate.gov.in/#/services/notifyPublishScreen,site build (read on ICEGATE),2026-09-25,ICEGATE Exchange Rate Notification No. 24/2026 w.e.f. 21-08-2026
+2026-09-04,USD,95.25,93.55,2026-09-03,VERIFIED,https://foservices.icegate.gov.in/#/services/notifyPublishScreen,site build (read on ICEGATE),2026-09-25,ICEGATE Exchange Rate Notification No. 25/2026 w.e.f. 04-09-2026
+2026-09-18,USD,96.80,95.10,2026-09-17,VERIFIED,https://foservices.icegate.gov.in/#/services/notifyPublishScreen,site build (read on ICEGATE),2026-09-25,ICEGATE Exchange Rate Notification No. 27/2026 w.e.f. 18-09-2026 (No. 26/2026 w.e.f. 17 Sep repeats the 25/2026 rates)
