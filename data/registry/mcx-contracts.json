@@ -1,0 +1,288 @@
+{
+ "schema": "ibpci.registry.mcx-contracts/1",
+ "title": "MCX bullion contract specifications and listed expiries",
+ "howToUpdate": "Specifications change only by MCX circular. Add each new contract month with its expiry date and the document you took it from. The engine also computes expiries from the rule, but a rule-computed date is marked PROBABLE because the MCX holiday calendar is not loaded.",
+ "lastReviewed": "2026-09-25",
+ "tenderPeriod": {
+  "rule": "Last 3 trading days including expiry day (staggered delivery)",
+  "citations": [
+   "C-MCX-TRD-383-2025"
+  ],
+  "verification": "PRIMARY COPY",
+  "appliesFrom": {
+   "GOLD": "2026-08",
+   "GOLDM": "2025-11",
+   "GOLDGUINEA": "2025-12",
+   "GOLDPETAL": "2025-12",
+   "SILVER": "2026-09",
+   "SILVERM": "2026-08",
+   "SILVERMIC": "2026-06"
+  }
+ },
+ "holidayCalendar": {
+  "loaded": false,
+  "note": "MCX trading holidays are not loaded (mcxindia.com blocks automated access). Weekends are treated as non-trading days; a weekday exchange holiday is not detected."
+ },
+ "specs": [
+  {
+   "id": "GOLD",
+   "displayName": "Gold",
+   "metal": "gold",
+   "lotSize": 1,
+   "lotUnit": "kg",
+   "quotationQuantity": 10,
+   "quotationUnit": "g",
+   "tick": "Re 1 per 10 g",
+   "quality": "995 (999 delivery earns a proportionate premium)",
+   "deliveryCentre": "Ahmedabad; additional Mumbai and New Delhi",
+   "expiryRule": "DAY5_PRECEDING",
+   "verification": "PRIMARY COPY",
+   "citations": [
+    "C-MCX-TRD-040-2026"
+   ],
+   "listingCycle": [
+    2,
+    4,
+    6,
+    8,
+    10,
+    12
+   ]
+  },
+  {
+   "id": "GOLDM",
+   "displayName": "Gold Mini",
+   "metal": "gold",
+   "lotSize": 100,
+   "lotUnit": "g",
+   "quotationQuantity": 10,
+   "quotationUnit": "g",
+   "tick": "Re 1 per 10 g",
+   "quality": "995",
+   "deliveryCentre": "Ahmedabad, Mumbai, New Delhi",
+   "expiryRule": "DAY5_PRECEDING",
+   "verification": "PRIMARY COPY",
+   "citations": [
+    "C-MCX-TRD-041-2026"
+   ],
+   "listingCycle": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ]
+  },
+  {
+   "id": "GOLDGUINEA",
+   "displayName": "Gold Guinea",
+   "metal": "gold",
+   "lotSize": 8,
+   "lotUnit": "g",
+   "quotationQuantity": 8,
+   "quotationUnit": "g",
+   "tick": "Re 1 per 8 g",
+   "quality": "999 or 995 (sources conflict)",
+   "deliveryCentre": "not confirmed",
+   "expiryRule": "LASTDAY_PRECEDING",
+   "verification": "SECONDARY",
+   "citations": [
+    "C-DHAN-GOLDGUINEA"
+   ],
+   "listingCycle": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ]
+  },
+  {
+   "id": "GOLDPETAL",
+   "displayName": "Gold Petal",
+   "metal": "gold",
+   "lotSize": 1,
+   "lotUnit": "g",
+   "quotationQuantity": 1,
+   "quotationUnit": "g",
+   "tick": "Re 1 per 1 g",
+   "quality": "999",
+   "deliveryCentre": "Mumbai; additional Ahmedabad and New Delhi",
+   "expiryRule": "LASTDAY_PRECEDING",
+   "verification": "SECONDARY",
+   "citations": [
+    "C-MCX-SPEC-PETAL-2019"
+   ],
+   "listingCycle": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ]
+  },
+  {
+   "id": "SILVER",
+   "displayName": "Silver",
+   "metal": "silver",
+   "lotSize": 30,
+   "lotUnit": "kg",
+   "quotationQuantity": 1,
+   "quotationUnit": "kg",
+   "tick": "Re 1 per kg",
+   "quality": "999",
+   "deliveryCentre": "Ahmedabad",
+   "expiryRule": "DAY5_PRECEDING",
+   "verification": "SECONDARY",
+   "citations": [
+    "C-DHAN-SILVER",
+    "C-MCX-TRD-090-2026"
+   ],
+   "listingCycle": [
+    3,
+    5,
+    7,
+    9,
+    12
+   ]
+  },
+  {
+   "id": "SILVERM",
+   "displayName": "Silver Mini",
+   "metal": "silver",
+   "lotSize": 5,
+   "lotUnit": "kg",
+   "quotationQuantity": 1,
+   "quotationUnit": "kg",
+   "tick": "Re 1 per kg",
+   "quality": "999",
+   "deliveryCentre": "Ahmedabad",
+   "expiryRule": "LASTDAY_PRECEDING",
+   "verification": "SECONDARY",
+   "citations": [
+    "C-MCX-TRD-372-2019"
+   ],
+   "note": "One secondary source gives a 30 kg delivery unit; the 2019 circular gives 5 kg.",
+   "listingCycle": [
+    2,
+    4,
+    6,
+    8,
+    11
+   ]
+  },
+  {
+   "id": "SILVERMIC",
+   "displayName": "Silver Micro",
+   "metal": "silver",
+   "lotSize": 1,
+   "lotUnit": "kg",
+   "quotationQuantity": 1,
+   "quotationUnit": "kg",
+   "tick": "Re 1 per kg",
+   "quality": "999 (IS 2112:1981)",
+   "deliveryCentre": "Ahmedabad",
+   "expiryRule": "LASTDAY_PRECEDING",
+   "verification": "PRIMARY COPY",
+   "citations": [
+    "C-MCX-TRD-275-2025"
+   ],
+   "listingCycle": [
+    2,
+    4,
+    6,
+    8,
+    11
+   ]
+  }
+ ],
+ "contracts": [
+  {
+   "product": "GOLD",
+   "month": "2026-10",
+   "expiry": "2026-10-05",
+   "verification": "SECONDARY",
+   "citations": [
+    "C-ZERODHA-EXP-SEP26",
+    "C-IIFL-GOLD-OCT26"
+   ]
+  },
+  {
+   "product": "GOLD",
+   "month": "2026-12",
+   "expiry": "2026-12-04",
+   "verification": "SECONDARY",
+   "citations": [
+    "C-GROWW-GOLD-EXP"
+   ]
+  },
+  {
+   "product": "GOLDM",
+   "month": "2026-10",
+   "expiry": "2026-10-05",
+   "verification": "SECONDARY",
+   "citations": [
+    "C-ZERODHA-EXP-SEP26"
+   ]
+  },
+  {
+   "product": "GOLDM",
+   "month": "2026-11",
+   "expiry": "2026-11-05",
+   "verification": "SECONDARY",
+   "citations": [
+    "C-IIFL-GOLDM-NOV26"
+   ]
+  },
+  {
+   "product": "SILVER",
+   "month": "2026-12",
+   "expiry": "2026-12-04",
+   "verification": "SECONDARY",
+   "citations": [
+    "C-DHAN-SILVER"
+   ]
+  },
+  {
+   "product": "SILVER",
+   "month": "2027-03",
+   "expiry": "2027-03-05",
+   "verification": "PRIMARY COPY",
+   "citations": [
+    "C-MCX-TRD-090-2026"
+   ]
+  },
+  {
+   "product": "SILVERMIC",
+   "month": "2026-11",
+   "expiry": "2026-11-30",
+   "verification": "SECONDARY",
+   "citations": [
+    "C-MCX-TRD-275-2025"
+   ],
+   "note": "Date as reported during research; consistent with the last-day rule in the circular."
+  }
+ ],
+ "listingCycleNote": "listingCycle (contract months) is from general market knowledge, not from a located circular: months computed from it are marked PROBABLE. Listed contracts in 'contracts' take precedence."
+}

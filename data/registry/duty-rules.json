@@ -1,0 +1,374 @@
+{
+ "schema": "ibpci.registry.duty-rules/1",
+ "title": "Dated customs duty rules and route executability flags for gold and silver bars",
+ "howToUpdate": "Add a new rule when a notification changes a rate; close the previous rule by setting its effectiveTo to the new rule's effectiveFrom (exclusive). Rates are decimals (0.10 = 10%). A null component means the split is not documented: the engine then uses the total rate and shows the split as PLACEHOLDER. Never enter 0 for an unknown rate.",
+ "lastReviewed": "2026-09-25",
+ "coverageNote": "Normal route covered from 2 Feb 2023. CEPA silver covered for FY2023-24, FY2024-25 and FY2026-27 only (FY2025-26 not located). CEPA gold quota covered from 2 Feb 2023. Dates without a rule return PLACEHOLDER.",
+ "rules": [
+  {
+   "ruleId": "R23-NORMAL",
+   "corridorId": "NORMAL",
+   "metals": [
+    "gold",
+    "silver"
+   ],
+   "effectiveFrom": "2023-02-02",
+   "effectiveTo": "2024-07-24",
+   "label": "Budget 2023: bars 10% BCD + 5% AIDC",
+   "bcd": 0.1,
+   "aidc": 0.05,
+   "total": 0.15,
+   "verification": "VERIFIED",
+   "citations": [
+    "C-CUS-02-2023",
+    "C-CUS-03-2023",
+    "C-CUS-04-2023",
+    "C-TRU-2023"
+   ],
+   "note": "Silver bars moved from 10.75% (7.5% BCD + 2.5% AIDC + 0.75% SWS) to 15%. Gold stayed at 15% with the split changed from 12.5% + 2.5% to 10% + 5%."
+  },
+  {
+   "ruleId": "R24-NORMAL",
+   "corridorId": "NORMAL",
+   "metals": [
+    "gold",
+    "silver"
+   ],
+   "effectiveFrom": "2024-07-24",
+   "effectiveTo": "2026-05-13",
+   "label": "Budget 2024: bars 5% BCD + 1% AIDC",
+   "bcd": 0.05,
+   "aidc": 0.01,
+   "total": 0.06,
+   "verification": "VERIFIED",
+   "citations": [
+    "C-CUS-30-2024",
+    "C-CUS-32-2024",
+    "C-TRU-2024"
+   ]
+  },
+  {
+   "ruleId": "R26-NORMAL",
+   "corridorId": "NORMAL",
+   "metals": [
+    "gold",
+    "silver"
+   ],
+   "effectiveFrom": "2026-05-13",
+   "effectiveTo": null,
+   "label": "May 2026 package: bars 10% BCD + 5% AIDC",
+   "bcd": 0.1,
+   "aidc": 0.05,
+   "total": 0.15,
+   "verification": "PRIMARY COPY",
+   "citations": [
+    "C-CUS-15-2026",
+    "C-CUS-16-2026",
+    "C-CUS-45-2025"
+   ]
+  },
+  {
+   "ruleId": "RC-SILVER-FY24",
+   "corridorId": "CEPA_SILVER",
+   "metals": [
+    "silver"
+   ],
+   "effectiveFrom": "2023-04-01",
+   "effectiveTo": "2024-04-01",
+   "label": "CEPA-UAE silver, FY2023-24",
+   "bcd": null,
+   "aidc": null,
+   "total": 0.08,
+   "verification": "SECONDARY",
+   "citations": [
+    "C-GTRI-45"
+   ],
+   "note": "GTRI states 8% under CEPA against 15% MFN in FY2023-24. The CEPA schedule for that year was not located."
+  },
+  {
+   "ruleId": "RC-SILVER-FY25",
+   "corridorId": "CEPA_SILVER",
+   "metals": [
+    "silver"
+   ],
+   "effectiveFrom": "2024-04-01",
+   "effectiveTo": "2025-04-01",
+   "label": "CEPA-UAE silver, FY2024-25",
+   "bcd": null,
+   "aidc": null,
+   "total": 0.08,
+   "verification": "SECONDARY",
+   "citations": [
+    "C-BS-JUL24-CEPA"
+   ],
+   "note": "Reuters put the CEPA silver rate at 8% when the July 2024 cut took the normal rate to 6%."
+  },
+  {
+   "ruleId": "RC-SILVER-FY27",
+   "corridorId": "CEPA_SILVER",
+   "metals": [
+    "silver"
+   ],
+   "effectiveFrom": "2026-04-01",
+   "effectiveTo": "2027-04-01",
+   "label": "CEPA-UAE silver, FY2026-27 (unconfirmed)",
+   "bcd": null,
+   "aidc": null,
+   "total": 0.07,
+   "verification": "SECONDARY",
+   "citations": [
+    "C-JURISHOUR-2026",
+    "C-JEWELBUZZ-2026",
+    "C-CUS-09-2026"
+   ],
+   "note": "Reported as 7% by secondary sources in May 2026. The primary table (09/2026-Customs) was located but its silver row was not read; a one-point annual step-down from 8% in FY2024-25 would imply 6%. Whether AIDC applies on top is not confirmed."
+  },
+  {
+   "ruleId": "RC-GOLD-2023",
+   "corridorId": "CEPA_GOLD_TRQ",
+   "metals": [
+    "gold"
+   ],
+   "effectiveFrom": "2023-02-02",
+   "effectiveTo": "2024-07-24",
+   "label": "CEPA-UAE gold in-quota: 10% + 4% AIDC",
+   "bcd": 0.1,
+   "aidc": 0.04,
+   "total": 0.14,
+   "verification": "VERIFIED",
+   "citations": [
+    "C-CUS-08-2023",
+    "C-DGFT-PN06-2015-20"
+   ]
+  },
+  {
+   "ruleId": "RC-GOLD-2024",
+   "corridorId": "CEPA_GOLD_TRQ",
+   "metals": [
+    "gold"
+   ],
+   "effectiveFrom": "2024-07-24",
+   "effectiveTo": "2026-05-13",
+   "label": "CEPA-UAE gold in-quota: 4% + 1% AIDC",
+   "bcd": 0.04,
+   "aidc": 0.01,
+   "total": 0.05,
+   "verification": "VERIFIED",
+   "citations": [
+    "C-CUS-31-2024",
+    "C-DGFT-PN06-2015-20"
+   ]
+  },
+  {
+   "ruleId": "RC-GOLD-2026",
+   "corridorId": "CEPA_GOLD_TRQ",
+   "metals": [
+    "gold"
+   ],
+   "effectiveFrom": "2026-05-13",
+   "effectiveTo": null,
+   "label": "CEPA-UAE gold in-quota: 10% + 4% AIDC",
+   "bcd": 0.1,
+   "aidc": 0.04,
+   "total": 0.14,
+   "verification": "PRIMARY COPY",
+   "inferred": true,
+   "citations": [
+    "C-CUS-18-2026",
+    "C-CUS-22-2022",
+    "C-DGFT-PN06-2015-20"
+   ],
+   "note": "Sets CEPA Table III S.No. 12 to 10 (in-quota tariff) and 4 (in-quota AIDC). The row description was not quoted in the copy read; it is the gold row on strong inference (the same cells were set to 10/4 by 08/2023 and 4/1 by 31/2024)."
+  }
+ ],
+ "exec": [
+  {
+   "corridorId": "NORMAL",
+   "metal": "gold",
+   "from": "2023-02-02",
+   "to": null,
+   "knowableFrom": "2023-02-02",
+   "code": "STANDARD",
+   "verification": "PROBABLE",
+   "citations": [],
+   "note": "The standard import route used for the duty arithmetic. Channel conditions (who may import, and through which agency) are not modeled, and no executability document is cited."
+  },
+  {
+   "corridorId": "NORMAL",
+   "metal": "silver",
+   "from": "2023-02-02",
+   "to": "2026-05-16",
+   "knowableFrom": "2023-02-02",
+   "code": "STANDARD",
+   "verification": "PROBABLE",
+   "citations": [],
+   "note": "The standard import route used for the duty arithmetic. Channel conditions (who may import, and through which agency) are not modeled, and no executability document is cited."
+  },
+  {
+   "corridorId": "NORMAL",
+   "metal": "silver",
+   "from": "2026-05-16",
+   "to": "2026-06-02",
+   "knowableFrom": "2026-05-16",
+   "code": "LICENCE_GATED",
+   "verification": "PRIMARY COPY",
+   "citations": [
+    "C-DGFT-17-2026-27",
+    "C-DGFT-03-2026-27"
+   ],
+   "note": "Silver bars (71069221, 71069229) moved from Free to Restricted for all origins. Export units, SEZs and jewellery-export schemes exempt."
+  },
+  {
+   "corridorId": "NORMAL",
+   "metal": "silver",
+   "from": "2026-06-02",
+   "to": null,
+   "knowableFrom": "2026-06-02",
+   "code": "LICENCE_GATED",
+   "verification": "PRIMARY COPY",
+   "citations": [
+    "C-DGFT-17-2026-27",
+    "C-DGFT-19-2026-27"
+   ],
+   "note": "Bars restricted; unwrought, powder and grain forms (71061000, 71069110/20/90) need a DGFT Import Authorisation, including through nominated agencies and IIBX. Refiners' dore under actual-user licence unchanged."
+  },
+  {
+   "corridorId": "CEPA_SILVER",
+   "metal": "silver",
+   "from": "2023-04-01",
+   "to": "2024-07-24",
+   "knowableFrom": "2024-04-08",
+   "code": "IN_USE",
+   "verification": "SECONDARY",
+   "citations": [
+    "C-REUTERS-FEB24"
+   ],
+   "note": "Reuters reported 939 tonnes of silver imported from the UAE in February 2024 while the paper wedge was open. Use is inferred from flows, not from quota or origin records."
+  },
+  {
+   "corridorId": "CEPA_SILVER",
+   "metal": "silver",
+   "from": "2023-04-01",
+   "to": "2024-07-24",
+   "knowableFrom": "2024-06-17",
+   "code": "IN_USE",
+   "verification": "PRIMARY COPY",
+   "citations": [
+    "C-GTRI-45",
+    "C-REUTERS-FEB24"
+   ],
+   "note": "UAE silver imports rose from US$29.2 million (FY2023) to US$1.74 billion (FY2024) while the paper wedge was open (GTRI). Use is inferred from flows, not from quota or origin records."
+  },
+  {
+   "corridorId": "CEPA_SILVER",
+   "metal": "silver",
+   "from": "2024-07-24",
+   "to": "2026-05-13",
+   "knowableFrom": "2024-07-25",
+   "code": "NOT_STATED",
+   "verification": "SECONDARY",
+   "citations": [
+    "C-BS-JUL24-CEPA"
+   ],
+   "note": "The July 2024 cut put the normal rate (6%) below the reported CEPA rate; Reuters reported that concessionary imports stopped. Executability itself is not documented."
+  },
+  {
+   "corridorId": "CEPA_SILVER",
+   "metal": "silver",
+   "from": "2026-05-13",
+   "to": "2026-05-16",
+   "knowableFrom": "2026-05-13",
+   "code": "NOT_STATED",
+   "verification": "PLACEHOLDER",
+   "citations": [],
+   "note": "Executability of the reopened wedge is not documented for these dates."
+  },
+  {
+   "corridorId": "CEPA_SILVER",
+   "metal": "silver",
+   "from": "2026-05-16",
+   "to": null,
+   "knowableFrom": "2026-05-16",
+   "code": "LICENCE_GATED",
+   "verification": "PRIMARY COPY",
+   "citations": [
+    "C-DGFT-17-2026-27",
+    "C-DGFT-19-2026-27"
+   ],
+   "note": "The DGFT curbs apply to the goods whatever their origin, so the CEPA paper rate does not by itself make the lane usable."
+  },
+  {
+   "corridorId": "CEPA_GOLD_TRQ",
+   "metal": "gold",
+   "from": "2023-02-02",
+   "to": "2026-07-01",
+   "knowableFrom": "2022-05-01",
+   "code": "CONSTRAINED",
+   "verification": "VERIFIED",
+   "citations": [
+    "C-DGFT-PN06-2015-20",
+    "C-CUS-43-2022"
+   ],
+   "note": "Tariff-rate quota; imports only through RBI- or DGFT-nominated agencies or IIBX qualified jewellers."
+  },
+  {
+   "corridorId": "CEPA_GOLD_TRQ",
+   "metal": "gold",
+   "from": "2023-02-02",
+   "to": "2026-07-01",
+   "knowableFrom": "2025-01-09",
+   "code": "CONSTRAINED",
+   "verification": "VERIFIED",
+   "citations": [
+    "C-DGFT-PN06-2015-20",
+    "C-CUS-43-2022",
+    "C-DHC-MANJALLY"
+   ],
+   "note": "Tariff-rate quota; imports only through RBI- or DGFT-nominated agencies or IIBX qualified jewellers. FY2024-25 allocations were litigated (Delhi High Court, Jan 2025)."
+  },
+  {
+   "corridorId": "CEPA_GOLD_TRQ",
+   "metal": "gold",
+   "from": "2026-07-01",
+   "to": "2026-10-01",
+   "knowableFrom": "2026-07-06",
+   "code": "CONSTRAINED",
+   "verification": "PRIMARY COPY",
+   "citations": [
+    "C-DGFT-PN18-2026-27",
+    "C-DGFT-PN53-2025-26"
+   ],
+   "note": "FY2025-26 quota permits extended to 30.09.2026 (DGFT Public Notice 18/2026-27)."
+  },
+  {
+   "corridorId": "CEPA_GOLD_TRQ",
+   "metal": "gold",
+   "from": "2026-07-01",
+   "to": "2026-10-01",
+   "knowableFrom": "2026-09-25",
+   "code": "CONSTRAINED",
+   "verification": "PRIMARY COPY",
+   "citations": [
+    "C-DGFT-PN18-2026-27",
+    "C-DGFT-PN53-2025-26",
+    "C-DGFT-LISTINGS"
+   ],
+   "note": "FY2025-26 quota permits extended to 30.09.2026. No FY2026-27 allocation found in the gazette listings up to 25 Sep 2026."
+  },
+  {
+   "corridorId": "CEPA_GOLD_TRQ",
+   "metal": "gold",
+   "from": "2026-10-01",
+   "to": null,
+   "knowableFrom": "2026-09-25",
+   "code": "NOT_STATED",
+   "verification": "PRIMARY COPY",
+   "citations": [
+    "C-DGFT-PN18-2026-27",
+    "C-DGFT-LISTINGS"
+   ],
+   "note": "FY2025-26 permits lapse after 30.09.2026 unless extended again. No FY2026-27 allocation was located as of 25 Sep 2026. Update this entry when DGFT publishes a notice."
+  }
+ ],
+ "execNote": "Each entry has knowableFrom: the date its evidence was published. The replay shows an entry only from that date, so a flag cannot leak later evidence into an earlier step. The live tables use everything known today."
+}

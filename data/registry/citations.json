@@ -1,0 +1,644 @@
+{
+ "schema": "ibpci.registry.citations/1",
+ "verificationLadder": {
+  "VERIFIED": "Primary document read on an official host (government, exchange, central bank or the publisher itself).",
+  "PRIMARY COPY": "Full text of the primary document read on a third-party copy (gazette tracker, law portal, mirror). The official host was not reachable from the build environment.",
+  "SECONDARY": "Reported by a named secondary source (news agency, newspaper, broker, consultancy). Primary document not located.",
+  "CITATION PENDING": "Carried over from the earlier evidence brief; no document located yet. Not presented as fact."
+ },
+ "accessed": "2026-09-25",
+ "items": {
+  "C-NT75-2026": {
+   "title": "Notification No. 75/2026-Customs (N.T.): tariff values, gold 1373 USD/10 g, silver 2028 USD/kg",
+   "publisher": "CBIC, Department of Revenue",
+   "date": "2026-09-15",
+   "url": "https://chennaicustoms.gov.in/wp-content/uploads/2026/09/English-version-of-Notification-75-2026-CUS-NT-dt-15.09.2026-PDF.pdf",
+   "host": "chennaicustoms.gov.in (official)",
+   "verification": "VERIFIED"
+  },
+  "C-CUS-15-2026": {
+   "title": "Notification No. 15/2026-Customs, G.S.R. 358(E): amends 45/2025-Customs, 5% to 10% at S.Nos 192-197 and 203 (gold, silver, dore, findings)",
+   "publisher": "Ministry of Finance (TRU), F.No. 354/04/2026-TRU",
+   "date": "2026-05-12",
+   "url": "https://gazettetracker.com/g/CG-DL-E-12052026-272489",
+   "altUrls": [
+    "https://worldtradescanner.com/cst-15-2026.pdf",
+    "https://egazette.gov.in/WriteReadData/2026/272489.pdf"
+   ],
+   "host": "gazettetracker.com / worldtradescanner.com (copies); egazette.gov.in not reachable",
+   "verification": "PRIMARY COPY",
+   "inForce": "2026-05-13"
+  },
+  "C-CUS-16-2026": {
+   "title": "Notification No. 16/2026-Customs: AIDC (11/2021, S.No. 15D gold and silver) set to 5%; SWS exemption extended",
+   "publisher": "Ministry of Finance (TRU)",
+   "date": "2026-05-12",
+   "url": "https://gazettetracker.com/g/CG-DL-E-12052026-272488",
+   "altUrls": [
+    "https://worldtradescanner.com/cst-16-2026.pdf"
+   ],
+   "host": "copies",
+   "verification": "PRIMARY COPY",
+   "inForce": "2026-05-13"
+  },
+  "C-CUS-17-2026": {
+   "title": "Notification No. 17/2026-Customs, G.S.R. 356(E): 57/2000 S.No. 1 changed from 4.35% to 10%",
+   "publisher": "Ministry of Finance (TRU)",
+   "date": "2026-05-12",
+   "url": "https://gazettetracker.com/g/CG-DL-E-12052026-272490",
+   "host": "gazettetracker.com (copy)",
+   "verification": "PRIMARY COPY",
+   "inForce": "2026-05-13"
+  },
+  "C-CUS-18-2026": {
+   "title": "Notification No. 18/2026-Customs, G.S.R. 357(E): India-UAE CEPA (22/2022) Table III S.No. 12 set to 10 (in-quota tariff) and 4 (in-quota AIDC)",
+   "publisher": "Ministry of Finance (TRU)",
+   "date": "2026-05-12",
+   "url": "https://gazettetracker.com/g/CG-DL-E-12052026-272491",
+   "host": "gazettetracker.com (copy)",
+   "verification": "PRIMARY COPY",
+   "inForce": "2026-05-13",
+   "note": "Row description not quoted in the copy read; gold row by strong inference."
+  },
+  "C-CUS-45-2025": {
+   "title": "Notification No. 45/2025-Customs: consolidated exemption notification",
+   "publisher": "Ministry of Finance (TRU)",
+   "date": "2025-10-24",
+   "url": "https://www.caalley.com/cus25/cst-45-2025.pdf",
+   "host": "caalley.com (copy)",
+   "verification": "PRIMARY COPY"
+  },
+  "C-CUS-09-2026": {
+   "title": "Notification No. 09/2026-Customs, G.S.R. 238(E): India-UAE CEPA Tables I-III for FY2026-27",
+   "publisher": "Ministry of Finance (TRU)",
+   "date": "2026-03-31",
+   "url": "https://gazettetracker.com/g/CG-DL-E-31032026-271472",
+   "host": "gazettetracker.com (copy)",
+   "verification": "PRIMARY COPY",
+   "note": "Located, but the silver (7106) row was not read: the copy is too long for the fetch tool."
+  },
+  "C-CUS-21-2025": {
+   "title": "Notification No. 21/2025-Customs: India-UAE CEPA rate table for FY2025-26",
+   "publisher": "Ministry of Finance (TRU)",
+   "date": "2025-03-28",
+   "url": "https://www.caalley.com/cus25/cst-21-2025.pdf",
+   "host": "caalley.com (copy)",
+   "verification": "PRIMARY COPY",
+   "note": "Silver row not read."
+  },
+  "C-CUS-30-2024": {
+   "title": "Notification No. 30/2024-Customs: 50/2017 S.Nos 356, 357, 357A, 357B, 364A-C set to 5%",
+   "publisher": "Ministry of Finance",
+   "date": "2024-07-23",
+   "url": "https://www.indiabudget.gov.in/budget2024-25/doc/cen/cus302024.pdf",
+   "host": "indiabudget.gov.in (official)",
+   "verification": "VERIFIED",
+   "inForce": "2024-07-24"
+  },
+  "C-CUS-31-2024": {
+   "title": "Notification No. 31/2024-Customs: CEPA gold in-quota row set to 4 and 1",
+   "publisher": "Ministry of Finance",
+   "date": "2024-07-23",
+   "url": "https://www.indiabudget.gov.in/budget2024-25/doc/cen/cus312024.pdf",
+   "host": "indiabudget.gov.in (official)",
+   "verification": "VERIFIED",
+   "inForce": "2024-07-24"
+  },
+  "C-CUS-32-2024": {
+   "title": "Notification No. 32/2024-Customs: AIDC on gold and silver bars 1%, dore 0.35%",
+   "publisher": "Ministry of Finance",
+   "date": "2024-07-23",
+   "url": "https://www.indiabudget.gov.in/budget2024-25/doc/cen/cus322024.pdf",
+   "host": "indiabudget.gov.in (official)",
+   "verification": "VERIFIED",
+   "inForce": "2024-07-24"
+  },
+  "C-CUS-33-2024": {
+   "title": "Notification No. 33/2024-Customs: 57/2000 cut from 9.35% to 4.35%",
+   "publisher": "Ministry of Finance",
+   "date": "2024-07-23",
+   "url": "https://www.indiabudget.gov.in/budget2024-25/doc/cen/cus332024.pdf",
+   "host": "indiabudget.gov.in (official)",
+   "verification": "VERIFIED",
+   "inForce": "2024-07-24"
+  },
+  "C-TRU-2024": {
+   "title": "Budget 2024-25 explanatory note (TRU): gold and silver bars 10% BCD + 5% AIDC to 5% + 1%",
+   "publisher": "Ministry of Finance, Tax Research Unit",
+   "date": "2024-07-23",
+   "url": "https://www.indiabudget.gov.in/budget2024-25/doc/cen/dojstru1.pdf",
+   "host": "indiabudget.gov.in (official)",
+   "verification": "VERIFIED"
+  },
+  "C-CUS-02-2023": {
+   "title": "Notification No. 02/2023-Customs: silver S.Nos 357, 357B 7.5% to 10%; gold 356, 357A 12.5% to 10%",
+   "publisher": "Ministry of Finance",
+   "date": "2023-02-01",
+   "url": "https://www.indiabudget.gov.in/budget2023-24/doc/cen/cus0223.pdf",
+   "host": "indiabudget.gov.in (official)",
+   "verification": "VERIFIED",
+   "inForce": "2023-02-02"
+  },
+  "C-CUS-03-2023": {
+   "title": "Notification No. 03/2023-Customs: AIDC on gold and silver 5%, dore 4.35%",
+   "publisher": "Ministry of Finance",
+   "date": "2023-02-01",
+   "url": "https://www.indiabudget.gov.in/budget2023-24/doc/cen/cus0323.pdf",
+   "host": "indiabudget.gov.in (official)",
+   "verification": "VERIFIED",
+   "inForce": "2023-02-02"
+  },
+  "C-CUS-04-2023": {
+   "title": "Notification No. 04/2023-Customs: social welfare surcharge exemption for 7106 and 7108",
+   "publisher": "Ministry of Finance",
+   "date": "2023-02-01",
+   "url": "https://www.indiabudget.gov.in/budget2023-24/doc/cen/cus0423.pdf",
+   "host": "indiabudget.gov.in (official)",
+   "verification": "VERIFIED",
+   "inForce": "2023-02-02"
+  },
+  "C-CUS-08-2023": {
+   "title": "Notification No. 08/2023-Customs: CEPA gold in-quota row set to 10 and 4",
+   "publisher": "Ministry of Finance",
+   "date": "2023-02-01",
+   "url": "https://www.indiabudget.gov.in/budget2023-24/doc/cen/cus0823.pdf",
+   "host": "indiabudget.gov.in (official)",
+   "verification": "VERIFIED",
+   "inForce": "2023-02-02"
+  },
+  "C-TRU-2023": {
+   "title": "Budget 2023-24 explanatory note (TRU): silver bars 10.75% (7.5% + 2.5% AIDC + 0.75% SWS) to 15%",
+   "publisher": "Ministry of Finance, Tax Research Unit",
+   "date": "2023-02-01",
+   "url": "https://www.indiabudget.gov.in/budget2023-24/doc/cen/dojstru1.pdf",
+   "host": "indiabudget.gov.in (official)",
+   "verification": "VERIFIED"
+  },
+  "C-CUS-22-2022": {
+   "title": "Notification No. 22/2022-Customs, G.S.R. 328(E): India-UAE CEPA tariff concessions (in force 1 May 2022)",
+   "publisher": "Ministry of Finance",
+   "date": "2022-04-30",
+   "url": "https://taxguru.in/custom-duty/notification-give-effect-tranche-india-uae-cepa.html",
+   "host": "taxguru.in (copy)",
+   "verification": "PRIMARY COPY"
+  },
+  "C-CUS-43-2022": {
+   "title": "Notification No. 43/2022-Customs: gold imports by qualified jewellers through IIBX",
+   "publisher": "Ministry of Finance",
+   "date": "2022-06-30",
+   "url": "https://www.taxtmi.com/notifications?id=138806",
+   "host": "taxtmi.com (copy)",
+   "verification": "PRIMARY COPY"
+  },
+  "C-DGFT-PN06-2015-20": {
+   "title": "DGFT Public Notice 06/2015-20: India-UAE CEPA gold TRQ (HS 7108 11/12/13; 120-200 t; 1% absolute duty reduction; nominated agencies or IIBX)",
+   "publisher": "Directorate General of Foreign Trade",
+   "date": "2022-05-01",
+   "url": "https://content.dgft.gov.in/Website/dgftprod/dcc80bcb-05fa-4082-8797-fb914ae089ab/English-%20PN%206%20-%20India%20UAE%20CEPA%201May2022.pdf",
+   "host": "content.dgft.gov.in (official)",
+   "verification": "VERIFIED"
+  },
+  "C-DGFT-17-2026-27": {
+   "title": "DGFT Notification 17/2026-27, S.O. 2537(E): silver bars 71069221 and 71069229 moved from Free to Restricted (Policy Condition 7)",
+   "publisher": "Directorate General of Foreign Trade",
+   "date": "2026-05-16",
+   "url": "https://gazettetracker.com/g/CG-DL-E-16052026-272636",
+   "host": "gazettetracker.com (copy)",
+   "verification": "PRIMARY COPY",
+   "note": "Immediate effect. Export units, SEZs and Chapter 4 jewellery-export schemes exempt."
+  },
+  "C-DGFT-19-2026-27": {
+   "title": "DGFT Notification 19/2026-27, S.O. 2809(E): 71061000, 71069110, 71069120, 71069190 permitted only against a DGFT Import Authorisation, including via nominated agencies and IIBX qualified jewellers",
+   "publisher": "Directorate General of Foreign Trade",
+   "date": "2026-06-02",
+   "url": "https://gazettetracker.com/g/CG-DL-E-02062026-273080",
+   "host": "gazettetracker.com (copy)",
+   "verification": "PRIMARY COPY",
+   "note": "Dore imported by refiners under an actual-user licence unchanged."
+  },
+  "C-DGFT-03-2026-27": {
+   "title": "DGFT Notification 03/2026-27, S.O. 1732(E): creates Policy Condition 7",
+   "publisher": "Directorate General of Foreign Trade",
+   "date": "2026-04-02",
+   "url": "https://gazettetracker.com/g/CG-DL-E-02042026-271545",
+   "host": "gazettetracker.com (copy)",
+   "verification": "PRIMARY COPY"
+  },
+  "C-DGFT-PN18-2026-27": {
+   "title": "DGFT Public Notice 18/2026-27: FY2025-26 CEPA gold quota permits extended from 30.06.2026 to 30.09.2026",
+   "publisher": "Directorate General of Foreign Trade",
+   "date": "2026-07-01",
+   "url": "https://gazettetracker.com/g/CG-DL-E-06072026-274198",
+   "host": "gazettetracker.com (copy; gazetted 6 Jul 2026)",
+   "verification": "PRIMARY COPY"
+  },
+  "C-DGFT-PN53-2025-26": {
+   "title": "DGFT Public Notice 53/2025-26: FY2025-26 CEPA gold quota permits extended from 31.03.2026 to 30.06.2026",
+   "publisher": "Directorate General of Foreign Trade",
+   "date": "2026-03-24",
+   "url": "https://gazettetracker.com/g/CG-DL-E-28032026-271361",
+   "host": "gazettetracker.com (copy)",
+   "verification": "PRIMARY COPY"
+  },
+  "C-DGFT-LISTINGS": {
+   "title": "Commerce Ministry gazette listings checked for an FY2026-27 gold TRQ allocation (none found up to 25 Sep 2026)",
+   "publisher": "gazettetracker.com listing",
+   "date": "2026-09-25",
+   "url": "https://gazettetracker.com/ministry/ministry-of-commerce-and-industry",
+   "host": "gazettetracker.com",
+   "verification": "SECONDARY",
+   "note": "Absence of evidence in a listing, not proof that no allocation exists."
+  },
+  "C-DHC-MANJALLY": {
+   "title": "M/s Manjally Jewellers v DGFT and Ors, W.P.(C) 138/2025 and connected matters, order of 9 Jan 2025 (FY2024-25 quota allocations)",
+   "publisher": "Delhi High Court",
+   "date": "2025-01-09",
+   "url": "https://indiankanoon.org/doc/179251579/",
+   "host": "indiankanoon.org (copy)",
+   "verification": "PRIMARY COPY"
+  },
+  "C-PIB-ERAM": {
+   "title": "PIB: CBIC launches Exchange Rate Automation Module (ERAM); rates on ICEGATE on the evening of the 1st and 3rd Thursdays, effective from midnight the following day (Circular 07/2024-Customs)",
+   "publisher": "Press Information Bureau",
+   "date": "2024-07-03",
+   "url": "https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=2029206",
+   "host": "pib.gov.in (official)",
+   "verification": "VERIFIED"
+  },
+  "C-CIRC-07-2024": {
+   "title": "Circular 07/2024-Customs (25 Jun 2024): exchange rates no longer notified; published through ERAM",
+   "publisher": "CBIC",
+   "date": "2024-06-25",
+   "url": "https://taxguru.in/custom-duty/customs-launch-exchange-rate-automation-module-eram.html",
+   "host": "taxguru.in (copy)",
+   "verification": "PRIMARY COPY"
+  },
+  "C-ICEGATE-ERAM": {
+   "title": "ICEGATE public exchange-rate viewer (ERAM)",
+   "publisher": "CBIC / ICEGATE",
+   "date": null,
+   "url": "https://foservices.icegate.gov.in/#/services/viewExchangeRate",
+   "host": "foservices.icegate.gov.in (official)",
+   "verification": "VERIFIED",
+   "note": "Script-driven app. Each fortnight's rates are in its list of exchange-rate notifications (View Exchange Rate Notifications, one PDF per notification, numbered in ICEGATE's own series, e.g. No. 27/2026 in force from 18 Sep 2026); the date lookup needs a captcha."
+  },
+  "C-COPYRIGHT-52": {
+   "title": "Copyright Act, 1957, s.52(1)(q)(i): reproduction or publication of matter published in the Official Gazette is not infringement",
+   "publisher": "Government of India",
+   "date": null,
+   "url": "https://indiankanoon.org/doc/1013176/",
+   "host": "indiankanoon.org (copy)",
+   "verification": "PRIMARY COPY"
+  },
+  "C-CBIC-TERMS": {
+   "title": "CBIC website terms: linking permitted without prior permission; pages may not be loaded into frames",
+   "publisher": "CBIC",
+   "date": null,
+   "url": "https://cbic-gst.gov.in/terms.html",
+   "host": "cbic-gst.gov.in (official)",
+   "verification": "VERIFIED"
+  },
+  "C-ECB-EXR": {
+   "title": "ECB euro foreign exchange reference rates, last 90 days (XML)",
+   "publisher": "European Central Bank",
+   "date": null,
+   "url": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml",
+   "host": "ecb.europa.eu (official)",
+   "verification": "VERIFIED"
+  },
+  "C-ECB-DISCLAIMER": {
+   "title": "ECB website disclaimer: free use if reproduced accurately and the ECB is cited; modifications must be stated",
+   "publisher": "European Central Bank",
+   "date": null,
+   "url": "https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html",
+   "host": "ecb.europa.eu (official)",
+   "verification": "VERIFIED"
+  },
+  "C-RBI-FBIL": {
+   "title": "RBI homepage: INR/1 USD 95.8918 as at 1.00 pm, 25 Sep 2026 (Source: FBIL)",
+   "publisher": "Reserve Bank of India",
+   "date": "2026-09-25",
+   "url": "https://www.rbi.org.in/",
+   "host": "rbi.org.in (official)",
+   "verification": "VERIFIED",
+   "note": "Used only in the reconciliation note. FBIL's own terms could not be read, so FBIL is not an automated source."
+  },
+  "C-CME-TERMS": {
+   "title": "CME Group market data disclaimer: personal non-commercial use only; no public display; no automated retrieval",
+   "publisher": "CME Group",
+   "date": "2023-09-07",
+   "url": "https://www.cmegroup.com/trading/market-data-explanation-disclaimer.html",
+   "host": "cmegroup.com (official)",
+   "verification": "VERIFIED"
+  },
+  "C-CME-FEES": {
+   "title": "CME Group market data fee list effective 1 Jan 2026: 'Public Website' USD 487 (Delayed and Historical Information only); billing period not shown in the extracted text",
+   "publisher": "CME Group",
+   "date": "2026-01-01",
+   "url": "https://www.cmegroup.com/market-data/files/january-2026-market-data-fee-list.pdf",
+   "host": "cmegroup.com (official)",
+   "verification": "VERIFIED"
+  },
+  "C-CME-ILA": {
+   "title": "CME Information License Agreement (June 2026): Delayed = 10 minutes to 8 hours; Historical = 8 hours or later",
+   "publisher": "CME Group",
+   "date": "2026-06",
+   "url": "https://www.cmegroup.com/market-data/files/information-license-agreement-june-2026.pdf",
+   "host": "cmegroup.com (official)",
+   "verification": "VERIFIED"
+  },
+  "C-KITE-TERMS": {
+   "title": "Kite Connect terms s.2(a): live market data cannot be displayed to the public at large",
+   "publisher": "Zerodha",
+   "date": null,
+   "url": "https://kite.trade/terms/",
+   "host": "kite.trade (official)",
+   "verification": "VERIFIED"
+  },
+  "C-KITE-FAQ": {
+   "title": "Kite Connect API FAQs: Rs 500 per month per API key; Personal (free) plan has no market data; redistribution not permitted",
+   "publisher": "Zerodha",
+   "date": null,
+   "url": "https://support.zerodha.com/category/trading-and-markets/general-kite/kite-api/articles/kite-connect-api-faqs",
+   "host": "support.zerodha.com (official)",
+   "verification": "VERIFIED"
+  },
+  "C-MCX-TRD-040-2026": {
+   "title": "MCX/TRD/040/2026: GOLD futures February 2027 contract (1 kg; quoted per 10 g; 995 purity; expiry 5th of month)",
+   "publisher": "Multi Commodity Exchange of India",
+   "date": null,
+   "url": "https://www.marketscreener.com/news/multi-commodity-exchange-of-india-commencement-of-futures-trading-in-gold-february-2027-contract-ce7e5bd9dc8ff525",
+   "host": "marketscreener.com (copy of MCX circular)",
+   "verification": "PRIMARY COPY",
+   "note": "Circular date not captured from the copy; used for specification fields only."
+  },
+  "C-MCX-TRD-041-2026": {
+   "title": "MCX/TRD/041/2026: GOLDM futures (100 g; quoted per 10 g; 995; expiry 5th, preceding working day if holiday)",
+   "publisher": "Multi Commodity Exchange of India",
+   "date": null,
+   "url": "https://www.marketscreener.com/news/multi-commodity-exchange-of-india-commencement-of-futures-trading-in-gold-mini-august-2026-contrac-ce7e5bd9dc8ff524",
+   "host": "marketscreener.com (copy)",
+   "verification": "PRIMARY COPY"
+  },
+  "C-MCX-TRD-275-2025": {
+   "title": "MCX/TRD/275/2025: SILVERMIC futures (1 kg; quoted per kg; 999; expiry last day of month)",
+   "publisher": "Multi Commodity Exchange of India",
+   "date": null,
+   "url": "https://www.marketscreener.com/quote/stock/MULTI-COMMODITY-EXCHANGE--10315042/news/Multi-Commodity-Exchange-of-India-Commencement-of-Futures-Trading-in-Silver-Micro-February-2026-Co-50185224/",
+   "host": "marketscreener.com (copy)",
+   "verification": "PRIMARY COPY"
+  },
+  "C-MCX-TRD-383-2025": {
+   "title": "MCX/TRD/383/2025: staggered delivery tender period = last 3 trading days including expiry day",
+   "publisher": "Multi Commodity Exchange of India",
+   "date": "2025-08-04",
+   "url": "https://www.marketscreener.com/news/multi-commodity-exchange-of-india-modification-in-staggered-delivery-period-in-commodity-futures-c-ce7c5edbdb8df02c",
+   "host": "marketscreener.com (copy)",
+   "verification": "PRIMARY COPY"
+  },
+  "C-MCX-TRD-090-2026": {
+   "title": "MCX/TRD/090/2026: SILVER March 2027 contract, expiry 5 Mar 2027",
+   "publisher": "Multi Commodity Exchange of India",
+   "date": "2026-03-16",
+   "url": "https://www.teamleaseregtech.com/updates/article/53082/mcx-notified-regarding-the-commencement-of-futures-trading-in-silver-m/",
+   "host": "teamleaseregtech.com (copy)",
+   "verification": "PRIMARY COPY"
+  },
+  "C-MCX-SPEC-PETAL-2019": {
+   "title": "MCX GOLDPETAL specification (Oct 2019 contract onwards): 1 g; 999; expiry last calendar day",
+   "publisher": "MCX (copy on a broker site)",
+   "date": null,
+   "url": "https://www.achiieversequitiesltd.com/wp-content/uploads/2019/04/gold-petal-october-2019-contract-onwards.pdf",
+   "host": "broker site (copy; may be superseded)",
+   "verification": "SECONDARY"
+  },
+  "C-MCX-TRD-372-2019": {
+   "title": "MCX/TRD/372/2019: SILVERM futures (5 kg; quoted per kg; 999; last calendar day)",
+   "publisher": "MCX (copy on a broker site)",
+   "date": null,
+   "url": "https://www.achiieversequitiesltd.com/wp-content/uploads/2019/04/MCXTRD3722019-Silver-Mini-Futures-Contracts.pdf",
+   "host": "broker site (copy; may be superseded)",
+   "verification": "SECONDARY"
+  },
+  "C-DHAN-GOLDGUINEA": {
+   "title": "Dhan: GOLDGUINEA futures summary (8 g; quoted per 8 g; expiry last calendar day)",
+   "publisher": "Dhan",
+   "date": null,
+   "url": "https://dhan.co/commodity/gold-guinea-futures-summary/",
+   "host": "dhan.co",
+   "verification": "SECONDARY",
+   "note": "Purity conflicts across sources (999 vs 995)."
+  },
+  "C-DHAN-SILVER": {
+   "title": "Dhan: SILVER futures summary (30 kg; quoted per kg; 999; expiry 5th)",
+   "publisher": "Dhan",
+   "date": null,
+   "url": "https://dhan.co/commodity/silver-futures-summary/",
+   "host": "dhan.co",
+   "verification": "SECONDARY"
+  },
+  "C-ZERODHA-EXP-SEP26": {
+   "title": "Zerodha bulletin: precious metals expiry, GOLD and GOLDM October contracts expire 5 Oct 2026",
+   "publisher": "Zerodha",
+   "date": "2026-09-16",
+   "url": "https://zerodha.com/marketintel/bulletin/458280/commodities-precious-metals-expiry-september-2026",
+   "host": "zerodha.com",
+   "verification": "SECONDARY"
+  },
+  "C-IIFL-GOLD-OCT26": {
+   "title": "IIFL: GOLD futures 05-Oct-2026",
+   "publisher": "IIFL",
+   "date": null,
+   "url": "https://www.indiainfoline.com/commodity/mcxfut/gold/05-oct-2026",
+   "host": "indiainfoline.com",
+   "verification": "SECONDARY"
+  },
+  "C-IIFL-GOLDM-NOV26": {
+   "title": "IIFL: GOLDM futures 05-Nov-2026",
+   "publisher": "IIFL",
+   "date": null,
+   "url": "https://www.indiainfoline.com/commodity/mcxfut/goldm/05-nov-2026",
+   "host": "indiainfoline.com",
+   "verification": "SECONDARY"
+  },
+  "C-GROWW-GOLD-EXP": {
+   "title": "Groww: gold futures and options expiry (GOLD Dec 2026 expires 4 Dec 2026)",
+   "publisher": "Groww",
+   "date": null,
+   "url": "https://groww.in/blog/gold-futures-and-options-expiry",
+   "host": "groww.in",
+   "verification": "SECONDARY"
+  },
+  "C-BHAAVBRIEF": {
+   "title": "BhaavBrief: MCX bhavcopy columns (Date, Instrument Name, Symbol, Expiry Date, Option Type, Strike Price, Open, High, Low, Close, Previous Close, Volume (Lots), Volume (In 000's), Value (Lacs), Open Interest (Lots))",
+   "publisher": "BhaavBrief",
+   "date": null,
+   "url": "https://bhaavbrief.in/tools/mcx-bhavcopy",
+   "host": "bhaavbrief.in",
+   "verification": "SECONDARY"
+  },
+  "C-MCX-BHAVCOPY": {
+   "title": "MCX bhavcopy page (blocked to automated access; terms not read)",
+   "publisher": "Multi Commodity Exchange of India",
+   "date": null,
+   "url": "https://www.mcxindia.com/market-data/bhavcopy",
+   "host": "mcxindia.com (official)",
+   "verification": "CITATION PENDING",
+   "note": "Terms of use and redistribution policy could not be read."
+  },
+  "C-GTRI-45": {
+   "title": "GTRI Flagship Report 45, 'Addressing the FTA led Spike in Gold and Silver Imports from UAE': silver imports from UAE US$29.2 million (FY2023) to US$1.74 billion (FY2024); 8% CEPA vs 15% MFN; revenue loss Rs 1,010 crore in FY2024",
+   "publisher": "Global Trade Research Initiative",
+   "date": "2024-06-17",
+   "url": "https://worldtradescanner.com/DisplayFlagshipReports-1.pdf",
+   "host": "worldtradescanner.com (copy; GTRI's own link returns 404)",
+   "verification": "PRIMARY COPY"
+  },
+  "C-BS-PTI-GTRI-2024": {
+   "title": "Business Standard/PTI: Gold, silver import from UAE surges 210%, need duty revision in FTA: GTRI",
+   "publisher": "Business Standard",
+   "date": "2024-06-17",
+   "url": "https://www.business-standard.com/economy/news/gold-silver-import-from-uae-surges-210-need-duty-revision-in-fta-gtri-124061700188_1.html",
+   "host": "business-standard.com",
+   "verification": "SECONDARY"
+  },
+  "C-REUTERS-FEB24": {
+   "title": "Reuters (via Business Standard): India imported 939 tonnes of silver from UAE in February 2024 (unnamed government official)",
+   "publisher": "Reuters / Business Standard",
+   "date": "2024-04-08",
+   "url": "https://www.business-standard.com/amp/industry/news/india-s-february-silver-imports-hit-record-set-to-rise-by-66-this-year-124040800694_1.html",
+   "host": "business-standard.com",
+   "verification": "SECONDARY"
+  },
+  "C-BS-JUL24-CEPA": {
+   "title": "Reuters (via Business Standard): India's duty cut stops concessionary silver, platinum imports from UAE",
+   "publisher": "Reuters / Business Standard",
+   "date": "2024-07-25",
+   "url": "https://www.business-standard.com/world-news/india-s-duty-cut-stops-concessionary-silver-platinum-imports-from-uae-124072500966_1.html",
+   "host": "business-standard.com",
+   "verification": "SECONDARY"
+  },
+  "C-WITS-2023": {
+   "title": "WITS (UN Comtrade): India imports from UAE, HS 7106, calendar 2023: US$339,840.07 thousand, 434,032 kg",
+   "publisher": "World Bank WITS",
+   "date": null,
+   "url": "https://wits.worldbank.org/trade/comtrade/en/country/IND/year/2023/tradeflow/Imports/partner/ARE/product/7106",
+   "host": "wits.worldbank.org (official)",
+   "verification": "VERIFIED"
+  },
+  "C-WITS-2024": {
+   "title": "WITS (UN Comtrade): India imports from UAE, HS 7106, calendar 2024: US$1,971,900.86 thousand, 2,463,050 kg",
+   "publisher": "World Bank WITS",
+   "date": null,
+   "url": "https://wits.worldbank.org/trade/comtrade/en/country/IND/year/2024/tradeflow/Imports/partner/ARE/product/7106",
+   "host": "wits.worldbank.org (official)",
+   "verification": "VERIFIED"
+  },
+  "C-JURISHOUR-2026": {
+   "title": "JurisHour: India-UAE CEPA tariff gap and the surge in gold and silver imports (CEPA silver 7%)",
+   "publisher": "JurisHour",
+   "date": "2026-05",
+   "url": "https://www.jurishour.in/columns/india-uae-cepa-tariff-gap-surge-gold-silver-imports/",
+   "host": "jurishour.in",
+   "verification": "SECONDARY"
+  },
+  "C-JEWELBUZZ-2026": {
+   "title": "JewelBuzz: India tightens silver imports; government approval now mandatory for silver bars and powder",
+   "publisher": "JewelBuzz",
+   "date": "2026-05",
+   "url": "https://jewelbuzz.in/india-tightens-silver-imports-government-approval-now-mandatory-for-silver-bars-and-powder/",
+   "host": "jewelbuzz.in",
+   "verification": "SECONDARY"
+  },
+  "C-KITCO-MAY26": {
+   "title": "Reuters via Kitco: India's silver imports hit over three-year low in May after import curbs (33 t, US$75.57 million, trade ministry data)",
+   "publisher": "Reuters / Kitco",
+   "date": "2026-06-15",
+   "url": "https://www.kitco.com/news/off-the-wire/2026-06-15/indias-silver-imports-hit-over-three-year-low-may-after-import-curbs",
+   "host": "kitco.com",
+   "verification": "SECONDARY"
+  },
+  "C-BS-METALSFOCUS-2026": {
+   "title": "Business Standard (Bloomberg): India's silver imports slump as licensing curbs disrupt shipments (Metals Focus estimates: 747 t in Jan 2026 to about 29 t in Jun 2026)",
+   "publisher": "Business Standard / Bloomberg",
+   "date": "2026-07-23",
+   "url": "https://www.business-standard.com/economy/news/india-s-silver-imports-slump-as-licensing-curbs-disrupt-shipments-126072300082_1.html",
+   "host": "business-standard.com",
+   "verification": "SECONDARY"
+  },
+  "C-ETV-GTRI-2026": {
+   "title": "ETV Bharat (GTRI analysis): gold imports from UAE Apr-Jun 2026 US$3.14 billion, up 124.8% from US$1.40 billion; UAE share 18.7% to 28.5%",
+   "publisher": "ETV Bharat",
+   "date": "2026-09-02",
+   "url": "https://www.etvbharat.com/en/business/gold-imports-jump-47-percent-as-uae-emerges-as-key-supplier-gtri-flags-fta-tariff-concession-enn26090206368",
+   "host": "etvbharat.com",
+   "verification": "SECONDARY"
+  },
+  "C-KITCO-AUG26": {
+   "title": "Kitco: India's gold imports fall 58% in August; silver imports rise 127% to US$1.02 billion (Commerce Ministry data)",
+   "publisher": "Kitco",
+   "date": "2026-09-16",
+   "url": "http://www.kitco.com/news/article/2026-09-16/indias-gold-imports-fall-58-august-silver-imports-rise-127",
+   "host": "kitco.com",
+   "verification": "SECONDARY"
+  },
+  "C-TRADESTAT": {
+   "title": "TradeStat (DGCI&S / Department of Commerce) monthly country-wise import database",
+   "publisher": "Department of Commerce",
+   "date": null,
+   "url": "https://tradestat.commerce.gov.in/meidb/country_wise_all_commodities_import",
+   "host": "tradestat.commerce.gov.in (official)",
+   "verification": "VERIFIED",
+   "note": "Form-based; no shareable query URL. Reuse: small portions for non-commercial use with acknowledgement (DGCI&S dissemination policy)."
+  },
+  "C-DGCIS-POLICY": {
+   "title": "DGCI&S data dissemination policy: small portions may be used for non-commercial purposes with acknowledgement",
+   "publisher": "DGCI&S",
+   "date": null,
+   "url": "https://www.dgciskol.gov.in/Writereaddata/Downloads/Data_dissemination_policy1.pdf",
+   "host": "dgciskol.gov.in (official)",
+   "verification": "VERIFIED"
+  },
+  "C-GH-PAGES-LIMITS": {
+   "title": "GitHub Pages limits: 1 GB site, 100 GB/month soft bandwidth; public repositories on GitHub Free",
+   "publisher": "GitHub",
+   "date": null,
+   "url": "https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits",
+   "host": "docs.github.com (official)",
+   "verification": "VERIFIED"
+  },
+  "C-GH-ACTIONS-SCHEDULE": {
+   "title": "GitHub Actions scheduled events: may be delayed or dropped at high load; disabled after 60 days without repository activity in public repositories",
+   "publisher": "GitHub",
+   "date": null,
+   "url": "https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows",
+   "host": "docs.github.com (official)",
+   "verification": "VERIFIED"
+  },
+  "C-PORKBUN-IN": {
+   "title": "Porkbun .in domain: USD 7.83 register/renew (listed 25 Sep 2026)",
+   "publisher": "Porkbun",
+   "date": "2026-09-25",
+   "url": "https://porkbun.com/tld/in",
+   "host": "porkbun.com",
+   "verification": "VERIFIED"
+  },
+  "C-PORKBUN-COM": {
+   "title": "Porkbun .com domain: USD 11.08 register/renew (listed 25 Sep 2026)",
+   "publisher": "Porkbun",
+   "date": "2026-09-25",
+   "url": "https://porkbun.com/tld/com",
+   "host": "porkbun.com",
+   "verification": "VERIFIED"
+  },
+  "C-DATABENTO": {
+   "title": "Databento pricing: Standard USD 199/month; Plus USD 1,750/month; external redistribution on Plus and Unlimited; exchange licensing passed through",
+   "publisher": "Databento",
+   "date": null,
+   "url": "https://databento.com/pricing",
+   "host": "databento.com",
+   "verification": "VERIFIED",
+   "note": "Redistribution tier per a secondary summary; exchange licence still required."
+  }
+ }
+}

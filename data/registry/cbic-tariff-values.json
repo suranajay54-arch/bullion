@@ -1,0 +1,31 @@
+{
+  "schema": "ibpci.registry.tariff-values/1",
+  "title": "CBIC tariff values for gold and silver (Customs Act, 1962, s.14(2))",
+  "units": { "gold": "USD per 10 g", "silver": "USD per kg" },
+  "howToUpdate": "Add one entry per new Customs (N.T.) tariff-value notification. Copy the gold and silver numbers from the notification text exactly. Do not rely on the '(i.e., no change)' marker: notifications 72/2026 and 75/2026 print it next to silver although silver changed. Set lastReviewed to the date you checked that no newer notification exists.",
+  "coverageFrom": "2026-07-01",
+  "coverageNote": "Entries are continuous from 60/2026 (in force 1 Jul 2026): each notification's 'last amended vide' clause names the previous one. Dates before coverageFrom return UNAVAILABLE.",
+  "lastReviewed": "2026-09-25",
+  "lastReviewedNote": "No notification after 75/2026 was found during research on 25 Sep 2026.",
+  "cadence": "Regular issues dated around the 15th and the last day of the month, in force the next day; ad hoc revisions on any day, also in force the next day.",
+  "entries": [
+    { "notification": "60/2026-Customs (N.T.)", "dated": "2026-06-30", "effectiveFrom": "2026-07-01", "gold": 1297, "silver": 1875,
+      "verification": "PRIMARY COPY", "documentUrl": "https://www.caalley.com/cus26/csnt60-2026.pdf", "documentHost": "caalley.com (third-party copy of the notification text)", "sha256": null },
+    { "notification": "63/2026-Customs (N.T.)", "dated": "2026-07-15", "effectiveFrom": "2026-07-16", "gold": 1311, "silver": 1869,
+      "verification": "PRIMARY COPY", "documentUrl": "https://www.caalley.com/cus26/csnt63-2026.pdf", "documentHost": "caalley.com (third-party copy); also reported by taxscan", "sha256": null },
+    { "notification": "68/2026-Customs (N.T.)", "dated": "2026-07-31", "effectiveFrom": "2026-08-01", "gold": 1323, "silver": 1875,
+      "verification": "PRIMARY COPY", "documentUrl": "https://www.caalley.com/cus26/csnt68-2026.pdf", "documentHost": "caalley.com (third-party copy of the notification text)", "sha256": null },
+    { "notification": "69/2026-Customs (N.T.)", "dated": "2026-08-10", "effectiveFrom": "2026-08-11", "gold": 1395, "silver": 2076,
+      "verification": "PRIMARY COPY", "documentUrl": "https://www.caalley.com/cus26/csnt69-2026.pdf", "documentHost": "caalley.com (third-party copy); ad hoc revision", "sha256": null },
+    { "notification": "70/2026-Customs (N.T.)", "dated": "2026-08-14", "effectiveFrom": "2026-08-15", "gold": 1407, "silver": 2097,
+      "verification": "PRIMARY COPY", "documentUrl": "https://www.caalley.com/cus26/csnt70-2026.pdf", "documentHost": "caalley.com (third-party copy); also reported by taxguru", "sha256": null },
+    { "notification": "71/2026-Customs (N.T.)", "dated": "2026-08-25", "effectiveFrom": "2026-08-26", "gold": 1500, "silver": 2097,
+      "verification": "PRIMARY COPY", "documentUrl": "https://www.caalley.com/cus26/csnt71-2026.pdf", "documentHost": "caalley.com (third-party copy); ad hoc revision, gold only", "sha256": null },
+    { "notification": "72/2026-Customs (N.T.)", "dated": "2026-08-31", "effectiveFrom": "2026-09-01", "gold": 1468, "silver": 2267,
+      "verification": "PRIMARY COPY", "documentUrl": "https://www.caalley.com/cus26/csnt72-2026.pdf", "documentHost": "caalley.com (third-party copy); also reported by taxguru", "sha256": null },
+    { "notification": "75/2026-Customs (N.T.)", "dated": "2026-09-15", "effectiveFrom": "2026-09-16", "gold": 1373, "silver": 2028,
+      "verification": "VERIFIED", "documentUrl": "https://chennaicustoms.gov.in/wp-content/uploads/2026/09/English-version-of-Notification-75-2026-CUS-NT-dt-15.09.2026-PDF.pdf",
+      "documentHost": "chennaicustoms.gov.in (CBIC Chennai Customs Zone, official)", "fileNo": "F.No. 467/01/2026-Cus.V", "sha256": null,
+      "quote": "gold 1373 per 10 grams; silver 2028 per kilogram; with effect from the 16th day of September, 2026" }
+  ]
+}
