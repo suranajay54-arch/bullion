@@ -1,0 +1,65 @@
+# Builds the daily data snapshot, runs the audit tests and publishes the site to GitHub Pages.
+# Runs: twice a day (after the ECB publishes, and a morning catch-up), whenever data or code
+# changes on the main branch, and on demand (Actions tab > Build and publish > Run workflow).
+# No secrets are used. A failed run leaves the last good site online.
+name: Build and publish
+
+on:
+  schedule:
+    - cron: '41 15 * * *'   # 21:11 IST, after the ECB reference rates (around 16:00 CET)
+    - cron: '41 2 * * *'    # 08:11 IST, catch-up run
+  push:
+    branches: [main]
+    paths: ['data/**', 'config/**', 'src/**', 'pipeline/**', 'tests/**', '.github/workflows/publish.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - id: pages
+        uses: actions/configure-pages@v5
+      - name: Build the data snapshot (fetches ECB rates; validates every registry and manual file)
+        run: node pipeline/run.js --fetch --fetch-docs --previous "${{ steps.pages.outputs.base_url }}/data/snapshot.json"
+      - name: Build the site
+        run: node pipeline/build.js
+      - name: Run the audit tests
+        run: node tests/run-tests.js
+      - name: Write the build log to the run summary
+        if: always()
+        run: |
+          node -e "
+          const fs=require('fs');
+          if(!fs.existsSync('build/run-log.json')){process.exit(0)}
+          const log=JSON.parse(fs.readFileSync('build/run-log.json','utf8'));
+          const lines=['## Data snapshot checks','','| Level | Source | Message |','|---|---|---|'];
+          log.checks.forEach(c=>{lines.push('| '+c.level+' | '+c.source+' | '+c.message.replace(/\|/g,'/')+' |'); if(c.level!=='info'){console.log('::warning title='+c.source+'::'+c.message)}});
+          fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, lines.join('\n')+'\n');
+          "
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

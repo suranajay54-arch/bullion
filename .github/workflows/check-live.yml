@@ -1,0 +1,42 @@
+# Opens the published site in a desktop browser and an Android phone emulation (plus the phone
+# with JavaScript off), checks every panel, the in-page audit tests, demo labelling and errors,
+# and saves screenshots. Runs after each publish and on demand. It is an emulator, not a real phone.
+name: Check the live site
+
+on:
+  workflow_run:
+    workflows: ['Build and publish']
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+
+jobs:
+  check:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - id: pages
+        uses: actions/configure-pages@v5
+      - name: Install the test browser
+        run: |
+          pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Wait for the new version to be served
+        run: sleep 60
+      - name: Check the published site
+        run: python tests/e2e_check.py --url "${{ steps.pages.outputs.base_url }}/" --out build/e2e-live
+      - name: Keep screenshots and the report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: live-site-check
+          path: build/e2e-live
+          retention-days: 30
