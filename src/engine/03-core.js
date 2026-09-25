@@ -325,7 +325,7 @@ function fmtNode(n) {
     case 'USD/troy oz': return fmtUSD(v) + '/oz';
     case 'USD/10g': return fmtUSD(v) + ' per 10 g';
     case 'USD/kg': return fmtUSD(v) + ' per kg';
-    case 'INR per USD': return NF.n4.format(v);
+    case 'INR per USD': return (n.kind === 'leaf' && n.sourceIds.indexOf('ICEGATE-ERAM') >= 0 ? NF.n2 : NF.n4).format(v); /* customs rates are notified to 2 dp */
     case 'USD': return fmtUSDShort(v);
     case 'USD/kg-v': return fmtUSD(v) + '/kg';
     case 'USD/oz-v': return fmtUSD(v) + '/oz';
