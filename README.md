@@ -1,6 +1,8 @@
 # India Bullion Parity & Corridor Intelligence (public site, Build 3.0.0)
 
-## Five steps to put it online (about 20 minutes, no cost)
+**Live: https://suranajay54-arch.github.io/bullion/** (published 25 Sep 2026 from this repository; rebuilt twice a day and on every data edit).
+
+## Five steps to put it online (done on 25 Sep 2026; kept for reference)
 
 1. **Get a GitHub account.** Go to github.com/signup and create a free account. Your username becomes part of the web address.
 2. **Create an empty public repository.** Go to github.com/new, type the name `bullion`, choose **Public**, leave everything else unticked, click **Create repository**.
