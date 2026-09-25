@@ -1,0 +1,324 @@
+{
+ "schema": "ibpci.sources/1",
+ "title": "Source registry: every input the site can use, how it is obtained, when it goes stale and whether it may be shown publicly",
+ "timezoneForDisplay": "Asia/Kolkata",
+ "sources": [
+  {
+   "id": "ECB-EXR",
+   "name": "ECB euro foreign exchange reference rates (EUR/USD, EUR/INR)",
+   "publisher": "European Central Bank",
+   "role": "Market USD/INR reference (via cross rate)",
+   "access": "AUTOMATED",
+   "status": "CONNECTED",
+   "url": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml",
+   "termsCitation": "C-ECB-DISCLAIMER",
+   "terms": "Free use if reproduced accurately and the ECB is cited as the source; any modification must be stated explicitly. Rates are published for information purposes only.",
+   "publicDisplay": {
+    "allowed": true,
+    "reason": "ECB reuse policy permits reproduction with attribution; the USD/INR cross is labelled as derived."
+   },
+   "cadence": "Each TARGET working day, around 16:00 CET/CEST. No rates on weekends or TARGET closing days (1 Jan, Good Friday, Easter Monday, 1 May, 25 and 26 Dec).",
+   "observationTime": "Daily concertation at about 14:15 Frankfurt time (Europe/Berlin).",
+   "staleRule": {
+    "type": "businessDaily",
+    "calendar": "TARGET",
+    "publishLocal": "16:00",
+    "tz": "Europe/Berlin",
+    "graceHours": 20
+   },
+   "delay": "Reference fixing, not a tradable quote. Published about 1 h 45 min after the concertation.",
+   "failureModes": [
+    "Network or TLS failure: keep the last valid observation from the previous snapshot, marked STALE when overdue",
+    "Format change: parse fails, adapter records an error and keeps the last valid observation",
+    "TARGET holiday: no new row is expected and nothing is flagged"
+   ],
+   "retry": "3 attempts with 2 s, 6 s, 18 s backoff; 20 s timeout per attempt"
+  },
+  {
+   "id": "USDINR-ECB-CROSS",
+   "name": "USD/INR reference derived from ECB rates (EUR/INR divided by EUR/USD)",
+   "publisher": "Derived by this site from ECB data",
+   "role": "Market FX leg of the benchmark conversion",
+   "access": "DERIVED",
+   "status": "CONNECTED",
+   "url": null,
+   "termsCitation": "C-ECB-DISCLAIMER",
+   "terms": "Modification of ECB data, stated explicitly as required by the ECB reuse policy. Not an ECB publication of USD/INR and not an Indian official rate.",
+   "publicDisplay": {
+    "allowed": true,
+    "reason": "Derived from ECB data with the modification stated."
+   },
+   "cadence": "Same as ECB-EXR.",
+   "observationTime": "Inherits the ECB concertation time.",
+   "staleRule": {
+    "type": "businessDaily",
+    "calendar": "TARGET",
+    "publishLocal": "16:00",
+    "tz": "Europe/Berlin",
+    "graceHours": 20
+   },
+   "delay": "Reference fixing. FBIL's USD/INR reference (published by FBIL, shown on the RBI homepage) is the Indian benchmark but its reuse terms could not be read, so it is not used automatically.",
+   "failureModes": [
+    "Missing EUR/USD or EUR/INR for a date: no cross is computed for that date (never interpolated)"
+   ]
+  },
+  {
+   "id": "CBIC-TV",
+   "name": "CBIC tariff values for gold and silver (Customs (N.T.) notifications under s.14(2))",
+   "publisher": "Central Board of Indirect Taxes and Customs",
+   "role": "Duty base (with the customs exchange rate)",
+   "access": "MANUAL-REGISTRY",
+   "status": "CONNECTED (owner-maintained registry)",
+   "url": "data/registry/cbic-tariff-values.json",
+   "termsCitation": "C-COPYRIGHT-52",
+   "terms": "Gazette matter: Copyright Act s.52(1)(q)(i) permits reproduction. CBIC permits linking but not framing (C-CBIC-TERMS).",
+   "publicDisplay": {
+    "allowed": true,
+    "reason": "Gazette notifications may be reproduced."
+   },
+   "cadence": "Regular notifications dated around the 15th and the last day of the month, in force the next day; ad hoc revisions on any day.",
+   "observationTime": "In force from 00:00 IST on the effective date.",
+   "staleRule": {
+    "type": "cbicTariffSchedule",
+    "staleDaysBeforeUnavailable": 16
+   },
+   "delay": "Owner adds each notification to the registry. The site marks the value STALE once a scheduled revision date passes without a registry review.",
+   "failureModes": [
+    "Owner misses a notification: value turns STALE after the next scheduled revision date",
+    "Document host unreachable: document hash check skipped and logged; values are unaffected"
+   ]
+  },
+  {
+   "id": "ICEGATE-ERAM",
+   "name": "Customs exchange rates for imports (ICEGATE Exchange Rate Automation Module)",
+   "publisher": "CBIC / ICEGATE",
+   "role": "Converts the USD tariff value into rupees for the duty base. Distinct from market USD/INR.",
+   "access": "MANUAL-FILE",
+   "status": "MANUAL (owner enters each fortnight)",
+   "url": "data/manual/customs-fx.csv",
+   "termsCitation": "C-PIB-ERAM",
+   "terms": "Published on ICEGATE since 4 Jul 2024 (Circular 07/2024-Customs); no longer a Gazette notification, so s.52(1)(q)(i) may not cover it. Individual rates are used as facts with attribution.",
+   "publicDisplay": {
+    "allowed": true,
+    "reason": "A single official rate used as a fact with attribution; reuse terms of the ICEGATE viewer were not readable."
+   },
+   "cadence": "Published at about 18:00 IST on the 1st and 3rd Thursday of each month; in force from 00:00 IST the next day.",
+   "observationTime": "In force from 00:00 IST on the effective date.",
+   "staleRule": {
+    "type": "eramSchedule",
+    "staleDaysBeforeUnavailable": 16
+   },
+   "delay": "Owner copies the USD import rate each fortnight from ICEGATE's list of exchange-rate notifications (View Currency Exchange Rate > View Exchange Rate Notifications > Download PDF; no login or captcha). The date lookup on the same page needs a captcha and ICEGATE documents no data feed, so neither is automated. Rows from 19 Jun to 18 Sep 2026 were read from notifications 18/2026 to 27/2026 on 25 Sep 2026.",
+   "failureModes": [
+    "No row for the current fortnight: duty legs are withheld (UNAVAILABLE), never back-filled from market USD/INR",
+    "Row older than 16 days past its window: UNAVAILABLE"
+   ]
+  },
+  {
+   "id": "DUTY-RULES",
+   "name": "Dated duty rules and route executability flags",
+   "publisher": "Ministry of Finance (customs notifications) and DGFT",
+   "role": "BCD, AIDC and total rates by date and route; licence and quota conditions",
+   "access": "MANUAL-REGISTRY",
+   "status": "CONNECTED (owner-maintained registry)",
+   "url": "data/registry/duty-rules.json",
+   "termsCitation": "C-COPYRIGHT-52",
+   "terms": "Gazette matter.",
+   "publicDisplay": {
+    "allowed": true,
+    "reason": "Gazette matter."
+   },
+   "cadence": "Changes with Budget and ad hoc notifications.",
+   "observationTime": "Effective dates as notified.",
+   "staleRule": {
+    "type": "none"
+   },
+   "delay": "Owner updates when a notification is issued.",
+   "failureModes": [
+    "Date outside documented coverage: PLACEHOLDER, never zero"
+   ]
+  },
+  {
+   "id": "MCX-SPEC",
+   "name": "MCX contract specifications and expiry calendar",
+   "publisher": "Multi Commodity Exchange of India (read from copies and broker pages)",
+   "role": "Quotation unit, lot size, expiry, tender period",
+   "access": "MANUAL-REGISTRY",
+   "status": "CONNECTED (owner-maintained registry)",
+   "url": "data/registry/mcx-contracts.json",
+   "termsCitation": "C-MCX-BHAVCOPY",
+   "terms": "Specification facts only; no prices.",
+   "publicDisplay": {
+    "allowed": true,
+    "reason": "Contract terms are facts published by the exchange in circulars."
+   },
+   "cadence": "Changes by MCX circular; new contract months launch monthly.",
+   "observationTime": "Not applicable.",
+   "staleRule": {
+    "type": "maxAgeDays",
+    "days": 60
+   },
+   "delay": "Owner adds new contract months.",
+   "failureModes": [
+    "Contract month not listed: expiry computed from the rule and marked PROBABLE (holidays not loaded)"
+   ]
+  },
+  {
+   "id": "MCX-SETTLE",
+   "name": "MCX daily closing or settlement prices (bhavcopy)",
+   "publisher": "Multi Commodity Exchange of India",
+   "role": "Futures quote for basis and spreads",
+   "access": "MANUAL-FILE or VISITOR (local file)",
+   "status": "BLOCKED FOR PUBLIC DISPLAY (display rights not confirmed)",
+   "url": "data/manual/mcx-settlements.csv and data/inbox/mcx/",
+   "termsCitation": "C-MCX-BHAVCOPY",
+   "terms": "mcxindia.com blocks automated access; its terms of use and data-redistribution policy could not be read. No automated retrieval is attempted.",
+   "publicDisplay": {
+    "allowed": false,
+    "reason": "Redistribution rights not confirmed. Prices you add are processed but kept out of the public snapshot until this switch is changed."
+   },
+   "cadence": "Each MCX trading day after the evening session (trading runs to 23:30 or 23:55 IST).",
+   "observationTime": "Close of the trading day, IST.",
+   "staleRule": {
+    "type": "businessDaily",
+    "calendar": "WEEKDAYS",
+    "publishLocal": "23:59",
+    "tz": "Asia/Kolkata",
+    "graceHours": 30
+   },
+   "delay": "Manual. A visitor may load a bhavcopy they downloaded themselves; it is parsed in their browser and never uploaded.",
+   "failureModes": [
+    "Column names changed: file rejected with the list of missing columns",
+    "Contract not in the registry: comparison withheld"
+   ]
+  },
+  {
+   "id": "COMEX-SETTLE",
+   "name": "COMEX gold (GC) and silver (SI) futures settlement by contract month",
+   "publisher": "CME Group",
+   "role": "Global benchmark (USD per troy ounce)",
+   "access": "VISITOR (local) or MANUAL-FILE",
+   "status": "BLOCKED FOR PUBLIC DISPLAY (licence required)",
+   "url": "data/manual/comex-settlements.csv",
+   "termsCitation": "C-CME-TERMS",
+   "terms": "CME permits personal non-commercial use only and prohibits public display and automated retrieval without a licence. Public website display needs a CME licence (fee list: 'Public Website USD 487', Delayed and Historical only; billing period not confirmed).",
+   "publicDisplay": {
+    "allowed": false,
+    "reason": "No CME licence. The public site shows the benchmark as UNAVAILABLE unless a visitor enters one in their own browser."
+   },
+   "cadence": "Daily settlement each CME business day (around 13:30 New York time for gold and silver).",
+   "observationTime": "Settlement time, America/New_York.",
+   "staleRule": {
+    "type": "businessDaily",
+    "calendar": "WEEKDAYS",
+    "publishLocal": "15:00",
+    "tz": "America/New_York",
+    "graceHours": 30
+   },
+   "delay": "Not connected. A licensed delayed feed (for example Databento Plus with a CME licence) is the documented upgrade path.",
+   "failureModes": [
+    "Generic spot quote entered: labelled as a generic benchmark, never as a COMEX contract"
+   ]
+  },
+  {
+   "id": "LOCAL-COSTS",
+   "name": "Local cost and financing assumptions (freight and insurance, assay/refining, handling, financing rate and days, physical premium)",
+   "publisher": "Site owner (default) or visitor (local override)",
+   "role": "Editable assumptions, not market data",
+   "access": "MANUAL-FILE and VISITOR",
+   "status": "NOT SUPPLIED (owner has not set defaults)",
+   "url": "data/manual/local-costs.json",
+   "termsCitation": null,
+   "terms": "Assumptions.",
+   "publicDisplay": {
+    "allowed": true,
+    "reason": "Owner's own assumptions."
+   },
+   "cadence": "When the owner reviews them.",
+   "observationTime": "Date entered.",
+   "staleRule": {
+    "type": "maxAgeDays",
+    "days": 90
+   },
+   "delay": "Not a feed.",
+   "failureModes": [
+    "Not supplied: landed values are shown before local costs, labelled as such"
+   ]
+  },
+  {
+   "id": "VISITOR",
+   "name": "Values entered by the visitor in this browser",
+   "publisher": "The visitor",
+   "role": "Local-only inputs (prices, costs, files)",
+   "access": "VISITOR",
+   "status": "LOCAL ONLY",
+   "url": null,
+   "termsCitation": null,
+   "terms": "Stored only in this browser. The page's Content Security Policy blocks all network requests, so nothing is sent anywhere.",
+   "publicDisplay": {
+    "allowed": false,
+    "reason": "Never leaves the visitor's device."
+   },
+   "cadence": "Whenever the visitor enters it.",
+   "observationTime": "Date supplied by the visitor.",
+   "staleRule": {
+    "type": "businessDaily",
+    "calendar": "WEEKDAYS",
+    "publishLocal": "23:59",
+    "tz": "Asia/Kolkata",
+    "graceHours": 30
+   },
+   "delay": "Not a feed.",
+   "failureModes": [
+    "Invalid entry: rejected and dependent outputs withheld"
+   ]
+  },
+  {
+   "id": "KITE",
+   "name": "Zerodha Kite Connect (optional, later)",
+   "publisher": "Zerodha",
+   "role": "Authorised MCX quotes for the owner's private use",
+   "access": "NOT CONNECTED",
+   "status": "NOT CONNECTED",
+   "url": "https://kite.trade/docs/connect/v3/",
+   "termsCitation": "C-KITE-TERMS",
+   "terms": "Rs 500 per month per API key (the free Personal plan has no market data). Terms s.2(a): live market data cannot be displayed to the public at large. Access token expires at 6 AM each day and login must be manual.",
+   "publicDisplay": {
+    "allowed": false,
+    "reason": "Kite terms forbid public display, so Kite can only ever feed a private owner view."
+   },
+   "cadence": "Real time when connected.",
+   "observationTime": "Exchange timestamp.",
+   "staleRule": {
+    "type": "none"
+   },
+   "delay": "Not connected.",
+   "failureModes": [
+    "Token expired at 6 AM: owner must log in again",
+    "Market closed: last tick kept as STALE"
+   ]
+  },
+  {
+   "id": "SYN-DEMO",
+   "name": "Synthetic demonstration data",
+   "publisher": "This site",
+   "role": "Demo mode only",
+   "access": "EMBEDDED",
+   "status": "DEMO ONLY",
+   "url": null,
+   "termsCitation": null,
+   "terms": "Invented round numbers. Never shown outside demo mode.",
+   "publicDisplay": {
+    "allowed": true,
+    "reason": "Labelled SYNTHETIC on every card, chart and export."
+   },
+   "cadence": "Never changes.",
+   "observationTime": "None: synthetic data has no market time.",
+   "staleRule": {
+    "type": "none"
+   },
+   "delay": "Not data.",
+   "failureModes": []
+  }
+ ]
+}
