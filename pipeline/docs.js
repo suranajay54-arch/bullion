@@ -47,6 +47,6 @@ out.push('', '| Id | Document | Publisher | Date | Evidence | Host |', '|---|---
 Object.keys(cites.items).forEach(function (k) { const c = cites.items[k]; out.push('| ' + [k, '[' + cell(c.title) + '](' + c.url + ')', c.publisher, c.date || '', c.verification, c.host].map(cell).join(' | ') + ' |'); });
 out.push('');
 const text = out.join('\n');
-if (/[–—]/.test(text)) { console.error('dash found in generated SOURCES.md'); process.exit(1); }
+if (/[\u2013\u2014]/.test(text)) { console.error('dash found in generated SOURCES.md'); process.exit(1); }
 fs.writeFileSync(path.join(ROOT, 'docs', 'SOURCES.md'), text);
 console.log('wrote docs/SOURCES.md (' + Math.round(text.length / 1024) + ' KB)');
