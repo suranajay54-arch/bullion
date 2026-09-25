@@ -1,8 +1,10 @@
 # Operating guide (one page)
 
+Site: https://suranajay54-arch.github.io/bullion/ . Repository: https://github.com/suranajay54-arch/bullion .
+
 ## What runs by itself
 
-- **Twice a day** (about 21:11 and 08:11 IST) GitHub runs "Build and publish": it downloads the ECB
+- **Twice a day** (about 21:11 and 08:11 IST; GitHub may start a scheduled run late when it is busy) GitHub runs "Build and publish": it downloads the ECB
   rates, checks every file you maintain, runs 42 audit tests and republishes the site. If any
   file you edited is invalid, the run stops and the previous site stays online.
 - **After each publish** "Check the live site" opens the site in a desktop browser and an Android

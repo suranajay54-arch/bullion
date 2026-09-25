@@ -1,16 +1,16 @@
 # Blockers and open items
 
-Stage 1 is complete and tested as a package. These items are unfinished, each with the reason and
-the lowest-cost way through.
+Stage 1 is live and tested. These items are unfinished, each with the reason and the lowest-cost way
+through.
 
 | # | Item | Status | Why | Way through |
 |---|---|---|---|---|
-| 1 | Public URL | Not deployed | Needs your GitHub account; this environment cannot publish to it | README "Five steps", or let me drive your browser with your approval |
+| 1 | Public URL | **Done**: https://suranajay54-arch.github.io/bullion/ | | Checked on GitHub after every publish (91 of 91) |
 | 2 | Customs exchange rate from 18 Sep 2026 | **Done** (96.80, ICEGATE Exchange Rate Notification No. 27/2026; rows from 19 Jun 2026 VERIFIED) | | Next: the rate in force from 2 Oct 2026 (published 1 Oct evening), then every fortnight |
 | 3 | MCX prices on the public page | Blocked | MCX terms and data-redistribution policy could not be read | Visitors enter or load their own (built); ask MCX in writing for end-of-day display permission |
 | 4 | COMEX prices on the public page | Blocked | CME permits personal use only without a licence | Visitors enter their own (built); CME "Public Website" licence (USD 487, period to confirm) if you want them published |
-| 5 | Live-site check on a real Android phone | Not done | No physical device here | Open the address on your phone after publishing; the GitHub check covers emulation |
-| 6 | First GitHub Actions run | Not run | See 1 | Happens at step 5 of the README |
+| 5 | Live-site check on a real Android phone | Emulation only (GitHub and your computer, all pass) | No physical device here | Open the address on your phone, in Chrome and from a WhatsApp link |
+| 6 | First GitHub Actions run | **Done** (live ECB download and document fingerprints worked) | | First scheduled run due 21:11 IST, 25 Sep 2026 |
 | 7 | Tariff-value notification in force 1 Oct 2026 | Not yet issued (expected about 30 Sep) | Scheduled revision | Add it on 30 Sep or 1 Oct; otherwise the site marks 75/2026 STALE from 1 Oct |
 | 8 | CEPA silver rate FY2026-27 | SECONDARY only (7%) | Primary table 09/2026-Customs located but its silver row not read | Read the row in the notification PDF and update data/registry/duty-rules.json |
 | 9 | CEPA gold in-quota row (10% + 4%) | Row identity inferred (PROBABLE) | The copy read did not quote the row description | Check 18/2026-Customs against 22/2022 Table III |
