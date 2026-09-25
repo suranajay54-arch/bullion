@@ -1,0 +1,17 @@
+{
+  "name": "india-bullion-parity-site",
+  "version": "3.0.0",
+  "private": true,
+  "description": "Public educational site: India gold and silver import parity, MCX basis and spreads, CEPA corridor replay. Daily snapshot, not live data, not advice.",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "snapshot": "node pipeline/run.js --fetch",
+    "snapshot:offline": "node pipeline/run.js --ecb-file data/fixtures/ecb-hist-90d-fixture-20260924.xml",
+    "build": "node pipeline/build.js",
+    "test": "node tests/run-tests.js",
+    "serve": "python3 -m http.server --directory dist 8080",
+    "check:browser": "python3 tests/e2e_check.py --url http://127.0.0.1:8080/ --out build/e2e --interact",
+    "docs": "node pipeline/docs.js",
+    "all": "node pipeline/run.js --fetch && node pipeline/build.js && node tests/run-tests.js"
+  }
+}
